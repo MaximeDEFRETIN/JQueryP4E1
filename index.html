@@ -6,11 +6,11 @@
   <title>JQuery : Exercice 1</title>
 </head>
 <body>
-  <ol>
-    <li id="pierres">Pierres</li>
-    <li id="feuille">Feuille</li>
-    <li id="ciseau">Ciseau</li>
-  </ol>
+  <select>
+    <option id="pierres">Pierres</option>
+    <option id="feuille">Feuille</option>
+    <option id="ciseau">Ciseau</option>
+  </select>
   <p>Choix de l'ordinateur</p>
   <p id="random"></p>
   <button type="button" id="shifumi">Shifumi !</button>
@@ -22,3 +22,38 @@
   <script src="javascript.js"></script>
 </body>
 </html>
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.2.1.js"></script>
+    <title>Exercice 1</title>
+  </head>
+  <body>
+    <select id="select">
+      <option value="1">Pierre</option>
+      <option value="2">Feuille</option>
+      <option value="3">Ciseaux</option>
+    </select>
+    <input type="button" value="shifumi" id="button">
+    <script>
+      $(function(){
+        var numberGames = 0;
+        var numberWin = 0;
+        var percentWin = 0;
+        $('#button').click(function(){
+
+          numberGames++;
+          var choiceBot = Math.floor(Math.random()*3)+1;
+          var myChoice = $('#select').val();
+          if(choiceBot == myChoice){
+            alert('Egalité');
+          }else if((choiceBot == 3 && myChoice == 2)||(choiceBot == 2 && myChoice == 1)||(choiceBot == 1 && myChoice == 3)){
+            alert('Perdu');
+          }else{
+            numberWin++;
+            alert('Gagné');
+          }
+          percentWin = numberWin*100/numberGames;
+          alert(percentWin + '%');
+        });-->
